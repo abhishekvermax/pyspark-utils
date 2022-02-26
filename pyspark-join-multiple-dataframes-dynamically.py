@@ -43,3 +43,12 @@ def join_multiple_dfs(df_named_dict,join_condition_list):
     return df_1
 
 join_multiple_dfs(df_named_dict = dict_df,join_condition_list=list_condition).show()
+
+
+# +---+---+---+----+----+----+
+# | A1| A2| A3|  D1|  D2|  D3|
+# +---+---+---+----+----+----+
+# |  1|  A| aa|   1|   A|  aa|
+# |  2|  B| bb|   2|   B|  bb|
+# |  3|  C| cc|null|null|null|
+# +---+---+---+----+----+----+
