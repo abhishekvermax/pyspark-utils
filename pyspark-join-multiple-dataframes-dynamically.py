@@ -39,7 +39,7 @@ def join_multiple_dfs(df_named_dict,join_condition_list):
         updated_df_list.append((df_named_dict.get(item[0]),df_named_dict.get(item[1]),item[2],item[3]))
     df_1 = updated_df_list[0][0]
     for x in updated_df_list:
-        df_1 = x[0].join(x[1], on=F.col(x[2]) == F.col(x[3]), how="left_outer")
+        df_1 = df_1.join(x[1], on=F.col(x[2]) == F.col(x[3]), how="left_outer")
     return df_1
 
 join_multiple_dfs(df_named_dict = dict_df,join_condition_list=list_condition).show()
